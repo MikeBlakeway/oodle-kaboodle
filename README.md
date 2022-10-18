@@ -1,8 +1,45 @@
-# Getting Started with Create React App
+# Hotel-Booking React Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About The Project
+
+## Task
+
+Design and build a basic prototype listing UI for Accommodations and Rooms, similar to what you might see on booking.com, populated from the given data in the two json files.
+
+Accommodation display should show:
+
+- Accommodation Name
+- Description
+- Type
+- Facilities
+
+Room display should show:
+
+- Room Name
+- Room Type
+- Min & Max Occupancy
+- Price of the Room
+- Number Available / Sold Out
+
+Styling can be as basic and minimal as you like, you can use existing frameworks if you want.
+
+If you feel the need you can add filtering / sorting / paging / any other useful enhancements.
+
+## Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/MikeBlakeway/hotel-booking.git hotel-booking
+   ```
+2. Install NPM packages
+   ```sh
+   cd hotel-booking
+   npm install --force
+   ```
+
+### Available Scripts
 
 In the project directory, you can run:
 
