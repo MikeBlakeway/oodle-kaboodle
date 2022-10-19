@@ -16,12 +16,14 @@ export const SingleRoom = () => {
 			</h2>
 			<div className='container mx-auto grid grid-cols-2 gap-4 place-items-center'>
 				<div className='pt-4 py-6'>
-					<p className='text-orange-600 text-lg font-bold mx-2'>
-						Price:{' '}
-						<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
-							{thisRoom.price.price}
-						</span>
-					</p>
+					{thisRoom.price && (
+						<p className='text-orange-600 text-lg font-bold mx-2'>
+							Price:{' '}
+							<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
+								{thisRoom.price.price}
+							</span>
+						</p>
+					)}
 					<p className='text-orange-600 text-lg font-bold mx-2'>
 						Type:{' '}
 						<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
@@ -40,18 +42,23 @@ export const SingleRoom = () => {
 							{thisRoom.min_occupancy}
 						</span>
 					</p>
-					<p className='text-orange-600 text-lg font-bold mx-2'>
-						Available:{' '}
-						<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
-							{roomAvailability.available}
-						</span>
-					</p>
-					<p className='text-orange-600 text-lg font-bold mx-2'>
-						Total:{' '}
-						<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
-							{roomAvailability.total}
-						</span>
-					</p>
+					{thisRoom.available && (
+						<>
+							<p className='text-orange-600 text-lg font-bold mx-2'>
+								Available:{' '}
+								<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
+									{roomAvailability.available}
+								</span>
+							</p>
+
+							<p className='text-orange-600 text-lg font-bold mx-2'>
+								Total:{' '}
+								<span className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'>
+									{roomAvailability.total}
+								</span>
+							</p>
+						</>
+					)}
 				</div>
 
 				<div className='pt-4 py-6'>
