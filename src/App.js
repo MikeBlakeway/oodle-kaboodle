@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import {Layout} from './layout'
-import {Landing, SingleHotel, NotFound} from './pages'
+import {Landing, SingleHotel, NotFound, SingleRoom} from './pages'
 
 export const App = () => (
 	/**
@@ -12,6 +12,8 @@ export const App = () => (
 		<Route path='/' element={<Layout />}>
 			<Route index element={<Landing />} />
 			<Route exact path='/hotels/:id' element={<SingleHotel />} />
+			<Route exact path='/hotels/:id/rooms/:roomId' element={<SingleRoom />} />
+
 			<Route path='*' element={<NotFound />} />
 		</Route>
 	</Routes>

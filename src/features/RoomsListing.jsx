@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const RoomsListing = ({rooms}) => {
 	return (
 		<>
 			<div className='grid grid-cols-2 gap-6'>
 				{rooms.map(({id, max_occupancy, min_occupancy, number_of_nights, name}) => (
-					<div className='px-6 py-4'>
+					<Link key={id} to={`rooms/${id}`} className='px-6 py-4'>
 						<div className='font-bold text-xl text-orange-400 my-4'>{name}</div>
 						<p className='text-slate-500 text-base'>
 							Min Occupancy:
@@ -25,10 +26,9 @@ const RoomsListing = ({rooms}) => {
 								{number_of_nights} days
 							</span>
 						</p>
-					</div>
+					</Link>
 				))}
 			</div>
-			{/* <SingleRoom room={rooms} /> */}
 		</>
 	)
 }
