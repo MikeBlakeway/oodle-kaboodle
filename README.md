@@ -36,7 +36,7 @@ If you feel the need you can add filtering / sorting / paging / any other useful
 2. Install NPM packages
    ```sh
    cd hotel-booking
-   npm install --force
+   npm install
    ```
 
 ### Available Scripts
