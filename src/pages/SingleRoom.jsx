@@ -8,7 +8,6 @@ export const SingleRoom = () => {
 	const hotelById = hotels.accommodations.find(hotels => hotels.id === +id)
 	const thisRoom = hotelById.rooms.find(room => room.id === +roomId)
 	const roomAvailability = availability.rooms.find(room => room.id === +roomId)
-	console.log(roomAvailability)
 
 	return (
 		<section className='px-12'>

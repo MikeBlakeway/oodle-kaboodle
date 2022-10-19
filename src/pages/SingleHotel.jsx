@@ -8,7 +8,6 @@ export const SingleHotel = () => {
 	const {id} = useParams()
 
 	const hotelById = hotels.accommodations.find(hotels => hotels.id === +id)
-	console.log(hotelById)
 
 	return (
 		<section className='px-12'>
