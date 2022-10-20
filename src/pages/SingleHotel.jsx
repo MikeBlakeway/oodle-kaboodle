@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Image} from '../layout'
-import hotels from '../data/accommodation.json'
+import HotelsContext from '../data/HotelsContext'
 import {useParams} from 'react-router-dom'
 import RoomsListing from '../features/RoomsListing'
 
 export const SingleHotel = () => {
 	const {id} = useParams()
 
-	const hotelById = hotels.accommodations.find(hotels => hotels.id === +id)
+	const {accommodations} = useContext(HotelsContext)
+	const hotelById = accommodations.find(hotels => hotels.id === +id)
 
 	return (
 		<section className='px-12'>
@@ -30,12 +31,12 @@ export const SingleHotel = () => {
 			</div>
 			<div className='pt-4 py-6'>
 				<p className='text-orange-600 text-2xl font-bold mb-4'>Facilities</p>
-				{hotelById.facilities.map(tag => (
+				{hotelById.facilities.map(facility => (
 					<span
-						key={tag.id}
+						key={facility.id}
 						className='inline-block bg-orange-100 rounded-full px-3 py-1 text-xs font-semibold text-orange-500 mr-2 mb-2'
 					>
-						{tag.label}
+						{facility.label}
 					</span>
 				))}
 			</div>

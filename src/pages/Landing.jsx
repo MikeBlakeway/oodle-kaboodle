@@ -1,7 +1,5 @@
 import React from 'react'
 import HotelListings from '../features/HotelListings'
-import hotels from '../data/accommodation.json'
-// import rooms from '../data/accommodation_availability.json'
 import {Hero} from '../layout'
 
 export const Landing = () => {
@@ -11,7 +9,7 @@ export const Landing = () => {
 				title='Oodle Kabooble'
 				prose='We got oodles of kaboodles for you to book your latest hotel getaway.'
 			/>
-			<HotelListings hotels={hotels.accommodations} />
+			<HotelListings />
 		</div>
 	)
 }
